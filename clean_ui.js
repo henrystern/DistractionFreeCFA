@@ -40,6 +40,7 @@ cleanUI = function() {
   styleElementOnLoad('.toolbar', { display: 'none' })
   styleElementOnLoad('#viewport3-0', { marginLeft: '0px' })
   waitForLoad('#main-footer').then((footer) => {
+    footer.style.padding = "0"
     footer.appendChild(newLink("#home", "footer-link-home", "Home"))
     footer.appendChild(newLink("#study-plan/structured", "footer-link-study-plan", "Study Plan"))
     footer.appendChild(newLink("#read/table-of-contents", "footer-link-lessons", "Lessons"))
@@ -56,6 +57,7 @@ restoreUI = function() {
   styleElementOnLoad('#navigation', { display: 'block' })
   styleElementOnLoad('.toolbar', { display: 'block' })
   styleElementOnLoad('#viewport3-0', { marginLeft: '160px' })
+  document.getElementById("main-footer").style.padding = "3.236em 40px 0 200px" // Whoever wrote this style should feel ashamed
   document.getElementById("footer-link-home").remove()
   document.getElementById("footer-link-study-plan").remove()
   document.getElementById("footer-link-lessons").remove()
