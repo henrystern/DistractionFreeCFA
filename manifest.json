@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "DistractionFreeCFA",
+  "version": "1.0",
+  "homepage_url": "https://github.com/henrystern/DistractionFreeCFA",
+
+  "description": "Removes the distracting sidebar and header while reading the CFA textbook.",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_title": "Toggle UI Elements",
+    "default_icon": {
+      "16": "icons/page-16.png",
+      "32": "icons/page-32.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://study.cfainstitute.org/*"],
+      "js": ["clean_ui.js"]
+    }
+  ]
+
+}
+
