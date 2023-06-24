@@ -84,7 +84,7 @@ main = function() {
 }
 
 main()
-browser.runtime.onMessage.addListener((message) => {
+chrome.runtime.onMessage.addListener((message) => {
   if (message.command === "toggle-cfa-ui") {
     toggleUI()
   }
